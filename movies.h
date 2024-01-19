@@ -49,9 +49,12 @@ public:
             if (movieList[i].name.compare(0, prefix.size(), prefix.c_str()) == 0)
             {
                 count++;
-                std::cout<<movieList[i].name<<", "<<movieList[i].rating<<std::endl;
+                prefixMatchColle.movieList.push_back(movieList[i]);
             }
         }
+
+        // perform sorting for prefixMatchColle.movieList
+        prefixMatchColle.AlphabetSorting();
         return count;
     }
 private:

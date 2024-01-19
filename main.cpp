@@ -84,7 +84,10 @@ int main(int argc, char** argv){
             cout << "No movies found with prefix: "<<prefixes[i]<< endl << endl;
         }
         else{
-
+            for(int j = 0 ; j < prefixMatchColle.movieList.size() ; ++j)
+            {
+                std::cout<<prefixMatchColle.movieList[i].name<<", "<<prefixMatchColle.movieList[i].rating<<std::endl;
+            }
         }
     }
 
