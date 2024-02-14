@@ -12,9 +12,6 @@
 #include <iomanip>
 #include <set>
 #include <queue>
-
-#include "movies.h"
-
 using namespace std;
 
 bool parseLine(string &line, string &movieName, double &movieRating);
@@ -34,7 +31,6 @@ int main(int argc, char** argv){
     }
   
     // Create an object of a STL data-structure to store all the movies
-    MovieCollection movieColle;
 
     string line, movieName;
     double movieRating;
@@ -44,16 +40,12 @@ int main(int argc, char** argv){
             // to construct your Movie objects
             // cout << movieName << " has rating " << movieRating << endl;
             // insert elements into your data structure
-            Movie tempMovie = Movie(movieName, movieRating);
-            movieColle.movieList.push_back(tempMovie);
     }
 
     movieFile.close();
 
     if (argc == 2){
             //print all the movies in ascending alphabetical order of movie names
-            movieColle.AlphabetSorting();
-            movieColle.PrintMovieList();
             return 0;
     }
 
@@ -74,22 +66,7 @@ int main(int argc, char** argv){
     //  For each prefix,
     //  Find all movies that have that prefix and store them in an appropriate data structure
     //  If no movie with that prefix exists print the following message
-    for (int i = 0 ; i < prefixes.size() ; ++i)
-    {
-        MovieCollection prefixMatchColle;
-        int matchCount = movieColle.PrefixSearching(prefixes[i], prefixMatchColle);
-
-        if(matchCount == 0)
-        {
-            cout << "No movies found with prefix: "<<prefixes[i]<< endl << endl;
-        }
-        else{
-            for(int j = 0 ; j < prefixMatchColle.movieList.size() ; ++j)
-            {
-                std::cout<<prefixMatchColle.movieList[i].name<<", "<<prefixMatchColle.movieList[i].rating<<std::endl;
-            }
-        }
-    }
+    cout << "No movies found with prefix "<<"<replace with prefix>" << endl << endl;
 
     //  For each prefix,
     //  Print the highest rated movie with that prefix if it exists.
