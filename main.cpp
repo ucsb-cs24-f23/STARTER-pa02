@@ -12,6 +12,7 @@
 #include <iomanip>
 #include <set>
 #include <queue>
+#include <sstream>
 using namespace std;
 
 #include "utilities.h"
