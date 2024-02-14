@@ -1,4 +1,4 @@
-// Spring'22
+// Winter'24
 // Instructor: Diba Mirza
 // Student name: 
 #include <iostream>
@@ -13,6 +13,9 @@
 #include <set>
 #include <queue>
 using namespace std;
+
+#include "utilities.h"
+#include "movies.h"
 
 bool parseLine(string &line, string &movieName, double &movieRating);
 
