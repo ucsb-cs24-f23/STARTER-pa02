@@ -1,4 +1,4 @@
-CXX_FLAGS = -std=c++11 -Ofast
+CXX_FLAGS = -std=c++20 -Ofast
 
 all: runMovies
 
